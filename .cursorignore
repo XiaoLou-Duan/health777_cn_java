@@ -52,3 +52,25 @@ application-my.yaml
 
 /yudao-ui-app/unpackage/
 **/.DS_Store
+
+######################################################################
+# Git
+.gitignore
+
+/yudao-module-report/
+/yudao-module-pay/
+/yudao-module-member/
+/yudao-module-bpm/
+/yudao-module-ai/
+/yudao-module-iot/
+/yudao-module-crm/
+/yudao-module-erp/
+/yudao-module-mall/
+/yudao-module-mp/
+/yudao-ui/
+
+/.gitee/
+/.github/
+
+/sql/
+!/sql/mysql/
