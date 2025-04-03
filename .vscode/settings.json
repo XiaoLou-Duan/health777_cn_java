@@ -7,5 +7,5 @@
             "args": ["-NoExit", "-Command", "chcp 65001"]
         }
     },
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "automatic"
 }
