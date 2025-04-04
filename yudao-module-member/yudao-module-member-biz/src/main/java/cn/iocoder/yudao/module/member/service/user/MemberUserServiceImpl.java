@@ -2,6 +2,7 @@ package cn.iocoder.yudao.module.member.service.user;
 
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.collection.ListUtil;
+import cn.hutool.core.io.IoUtil;
 import cn.hutool.core.lang.Assert;
 import cn.hutool.core.util.*;
 import cn.iocoder.yudao.framework.common.enums.CommonStatusEnum;
@@ -31,6 +32,8 @@ import org.springframework.transaction.support.TransactionSynchronizationManager
 
 import javax.annotation.Resource;
 import javax.validation.Valid;
+
+import java.io.InputStream;
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
@@ -38,7 +41,7 @@ import java.util.List;
 import static cn.iocoder.yudao.framework.common.exception.util.ServiceExceptionUtil.exception;
 import static cn.iocoder.yudao.framework.common.util.servlet.ServletUtils.getClientIP;
 import static cn.iocoder.yudao.module.member.enums.ErrorCodeConstants.*;
-
+import cn.iocoder.yudao.module.infra.api.file.FileApi;
 /**
  * 会员 User Service 实现类
  *
@@ -51,7 +54,8 @@ public class MemberUserServiceImpl implements MemberUserService {
 
     @Resource
     private MemberUserMapper memberUserMapper;
-
+    @Resource
+    private FileApi fileApi;
     @Resource
     private SmsCodeApi smsCodeApi;
 
@@ -314,4 +318,16 @@ public class MemberUserServiceImpl implements MemberUserService {
         return true;
     }
 
+    @Override
+    public String updateUserAvatar(Long loginUserId, InputStream inputStream) {
+        validateUserExists(loginUserId);
+        // 存储文件
+        String avatar = fileApi.createFile(IoUtil.readBytes(inputStream));
+        // 更新路径
+        MemberUserDO memberUserDO = new MemberUserDO();
+        memberUserDO.setId(loginUserId);
+        memberUserDO.setAvatar(avatar);
+        memberUserMapper.updateById(memberUserDO);
+        return avatar;
+    }
 }

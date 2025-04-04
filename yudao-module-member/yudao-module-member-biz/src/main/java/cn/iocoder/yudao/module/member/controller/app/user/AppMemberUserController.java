@@ -12,7 +12,9 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
+import org.springframework.web.multipart.MultipartFile;
+import static cn.iocoder.yudao.module.infra.enums.ErrorCodeConstants.FILE_IS_EMPTY;
+import static cn.iocoder.yudao.framework.common.exception.util.ServiceExceptionUtil.exception;
 import javax.annotation.Resource;
 import javax.annotation.security.PermitAll;
 import javax.validation.Valid;
@@ -74,6 +76,16 @@ public class AppMemberUserController {
     public CommonResult<Boolean> resetUserPassword(@RequestBody @Valid AppMemberUserResetPasswordReqVO reqVO) {
         userService.resetUserPassword(reqVO);
         return success(true);
+    }
+
+    @RequestMapping(value = "/update-avatar", method = { RequestMethod.POST, RequestMethod.PUT })
+    @Operation(summary = "上传用户个人头像")
+    public CommonResult<String> updateUserAvatar(@RequestParam("avatarFile") MultipartFile file) throws Exception {
+        if (file.isEmpty()) {
+            throw exception(FILE_IS_EMPTY);
+        }
+        String avatar = userService.updateUserAvatar(getLoginUserId(), file.getInputStream());
+        return success(avatar);
     }
 
 }

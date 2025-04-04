@@ -9,6 +9,8 @@ import cn.iocoder.yudao.module.member.controller.app.user.vo.*;
 import cn.iocoder.yudao.module.member.dal.dataobject.user.MemberUserDO;
 
 import javax.validation.Valid;
+
+import java.io.InputStream;
 import java.util.Collection;
 import java.util.List;
 
@@ -186,5 +188,14 @@ public interface MemberUserService {
      * @return 更新结果
      */
     boolean updateUserPoint(Long userId, Integer point);
+
+    /**
+     * 更新用户头像
+     *
+     * @param loginUserId 登录用户编号
+     * @param inputStream 头像文件流
+     * @return 头像 URL
+     */
+    String updateUserAvatar(Long loginUserId, InputStream inputStream);
 
 }
