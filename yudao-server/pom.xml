@@ -43,6 +43,22 @@
             <artifactId>yudao-module-exercise-biz</artifactId>
             <version>${revision}</version>
         </dependency>
+        <dependency>
+            <groupId>cn.iocoder.boot</groupId>
+            <artifactId>yudao-module-social-biz</artifactId>
+            <version>${revision}</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.iocoder.boot</groupId>
+            <artifactId>yudao-module-nutrition-biz</artifactId>
+            <version>${revision}</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.iocoder.boot</groupId>
+            <artifactId>yudao-module-medical-biz</artifactId>
+            <version>${revision}</version>
+        </dependency>
+
 
         <!-- 数据报表。默认注释，保证编译速度 -->
         <!--        <dependency>-->

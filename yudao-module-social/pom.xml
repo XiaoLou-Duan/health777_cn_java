@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>yudao</artifactId>
+    <groupId>cn.iocoder.boot</groupId>
+    <version>${revision}</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>yudao-module-social</artifactId>
+  <packaging>pom</packaging>
+
+  <name>${project.artifactId}</name>
+  <description>
+        social 模块，主要实现社交、社区、互动等功能。
+    </description>
+
+  <modules>
+    <module>yudao-module-social-api</module>
+    <module>yudao-module-social-biz</module>
+  </modules>
+
+</project> 

@@ -17,6 +17,9 @@
         <module>yudao-module-infra</module>
         <module>yudao-module-member</module>
         <module>yudao-module-exercise</module>
+        <module>yudao-module-nutrition</module>
+        <module>yudao-module-medical</module>
+        <module>yudao-module-social</module>
         <!--        <module>yudao-module-bpm</module>-->
         <!--        <module>yudao-module-report</module>-->
         <!--        <module>yudao-module-mp</module>-->
