@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 @Tag(name = "管理后台 - 营养")
 @RestController
 @RequestMapping("/nutrition")
-public class NutritionController {
+public class AdminNutritionController {
     @GetMapping("/get")
     @Operation(summary = "获取营养信息")
     public String getNutritionInfo() {
         return "营养信息";
     }
-}   
+}
