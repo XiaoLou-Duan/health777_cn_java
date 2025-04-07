@@ -70,6 +70,3 @@ application-my.yaml
 
 /.gitee/
 /.github/
-
-/sql/
-!/sql/mysql/
