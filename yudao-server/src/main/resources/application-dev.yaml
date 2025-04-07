@@ -28,7 +28,7 @@ spring:
         wall:
           config:
             multi-statement-allow: true
-    dynamic: # 多数据源配置
+    dynamic: # 多数据源配置c
       druid: # Druid 【连接池】相关的全局配置
         initial-size: 5 # 初始连接数
         min-idle: 10 # 最小连接池数量
