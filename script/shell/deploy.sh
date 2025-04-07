@@ -8,7 +8,7 @@ BASE_PATH=/work/projects/yudao-server
 SOURCE_PATH=$BASE_PATH/build
 # 服务名称。同时约定部署服务的 jar 包名字也为它。
 SERVER_NAME=yudao-server
-# 环境
+# 环境注意是dev
 PROFILES_ACTIVE=dev
 # 健康检查 URL
 HEALTH_CHECK_URL=http://127.0.0.1:48080/actuator/health/
