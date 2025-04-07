@@ -99,7 +99,7 @@ function start() {
     echo "[start] PROFILES: $PROFILES_ACTIVE"
 
     # 开始启动
-    BUILD_ID=dontKillMe nohup java -server $JAVA_OPS $JAVA_AGENT -jar $BASE_PATH/$SERVER_NAME.jar --spring.profiles.active=$PROFILES_ACTIVE &
+    BUILD_ID=dontKillMe nohup java -server $JAVA_OPS -jar $BASE_PATH/$SERVER_NAME.jar --spring.profiles.active=$PROFILES_ACTIVE &
     echo "[start] 启动 $BASE_PATH/$SERVER_NAME 完成"
 }
 
