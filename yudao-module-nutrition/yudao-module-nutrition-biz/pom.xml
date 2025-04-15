@@ -21,7 +21,7 @@
     <dependency>
       <groupId>cn.iocoder.boot</groupId>
       <artifactId>yudao-module-nutrition-api</artifactId>
-      <version>${project.version}</version>
+      <version>${revision}</version>
     </dependency>
 
     <dependency>
@@ -85,6 +85,17 @@
     <dependency>
       <groupId>cn.iocoder.boot</groupId>
       <artifactId>yudao-spring-boot-starter-biz-ip</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>cn.iocoder.boot</groupId>
+      <artifactId>yudao-module-member-biz</artifactId>
+      <version>${revision}</version>
     </dependency>
   </dependencies>
 

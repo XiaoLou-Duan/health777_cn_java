@@ -2,6 +2,7 @@ package cn.iocoder.yudao.module.member.api.user.dto;
 
 import cn.iocoder.yudao.framework.common.enums.CommonStatusEnum;
 import lombok.Data;
+import java.math.BigDecimal;
 
 import java.time.LocalDateTime;
 
@@ -51,5 +52,15 @@ public class MemberUserRespDTO {
      * 积分
      */
     private Integer point;
+
+    /**
+     * 蛋白质目标量(克)
+     */
+    private BigDecimal proteinTarget;
+
+    /**
+     * 热量目标量(千卡)
+     */
+    private BigDecimal caloriesTarget;
 
 }

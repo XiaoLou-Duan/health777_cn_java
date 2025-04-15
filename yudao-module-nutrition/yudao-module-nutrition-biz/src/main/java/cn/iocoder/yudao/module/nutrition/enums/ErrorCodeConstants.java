@@ -3,28 +3,24 @@ package cn.iocoder.yudao.module.nutrition.enums;
 import cn.iocoder.yudao.framework.common.exception.ErrorCode;
 
 /**
- * 营养模块的错误码枚举类
+ * Nutrition 错误码枚举类
  *
- * 营养模块，使用 1-023-000-000 段
+ * nutrition 系统，使用 1-019-000-000 段
  */
 public interface ErrorCodeConstants {
 
-    // ========== 食物项目相关 1023001000 ==========
-    ErrorCode FOOD_ITEM_NOT_EXISTS = new ErrorCode(1023001000, "食物项目不存在");
+    // ========== 饮食日志相关 1-019-000-000 ==========
+    ErrorCode DIET_LOG_NOT_EXISTS = new ErrorCode(1_019_000_001, "饮食日志不存在");
+    ErrorCode DIET_LOG_NOT_SELF = new ErrorCode(1_019_000_002, "不能操作他人的饮食日志");
+    ErrorCode DIET_LOG_UPLOAD_PHOTO_FAIL = new ErrorCode(1_019_000_003, "上传食物照片失败");
 
-    // ========== 餐食相关 1023002000 ==========
-    ErrorCode MEAL_NOT_EXISTS = new ErrorCode(1023002000, "餐食不存在");
+    // ========== 乳清蛋白摄入记录相关 1-019-001-000 ==========
+    ErrorCode WHEY_PROTEIN_LOG_NOT_EXISTS = new ErrorCode(1_019_001_001, "乳清蛋白摄入记录不存在");
+    ErrorCode WHEY_PROTEIN_LOG_NOT_SELF = new ErrorCode(1_019_001_002, "不能操作他人的乳清蛋白摄入记录");
+    ErrorCode WHEY_PROTEIN_LOG_UPLOAD_PHOTO_FAIL = new ErrorCode(1_019_001_003, "上传乳清蛋白照片失败");
 
-    // ========== 餐食食物相关 1023003000 ==========
-    ErrorCode MEAL_FOOD_ITEM_NOT_EXISTS = new ErrorCode(1023003000, "餐食食物不存在");
-
-    // ========== 蛋白质补充剂相关 1023004000 ==========
-    ErrorCode PROTEIN_SUPPLEMENT_NOT_EXISTS = new ErrorCode(1023004000, "蛋白质补充剂不存在");
-
-    // ========== 营养记录相关 1023005000 ==========
-    ErrorCode NUTRITION_RECORD_NOT_EXISTS = new ErrorCode(1023005000, "营养记录不存在");
-
-    // ========== 饮食推荐相关 1023006000 ==========
-    ErrorCode DIET_RECOMMENDATION_NOT_EXISTS = new ErrorCode(1002001000, "饮食建议不存在");
+    // ========== AI识别日志相关 1-019-002-000 ==========
+    ErrorCode AI_RECOGNITION_LOG_NOT_EXISTS = new ErrorCode(1_019_002_001, "AI识别日志不存在");
+    ErrorCode AI_RECOGNITION_FAIL = new ErrorCode(1_019_002_002, "AI识别失败");
 
 }
